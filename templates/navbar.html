@@ -7,18 +7,17 @@
     <li class="nav-item {% if request.path.endswith("linked-data-intro") %}active{% endif %}">
       <a class="nav-link" href="{{ url_for('page', name='linked-data-intro') }}">Linked Data</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">BIBFRAME</a>
+    <li class="nav-item{% if request.path.endswith("bibframe") %} active{% endif %}">
+      <a class="nav-link" href="{{ url_for('page', name='bibframe') }}">BIBFRAME</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Exercises</a>
+    <li class="nav-item{% if request.path.endswith("map") %} active{% endif %}">
+      <a class="nav-link" href="{{ url_for('page', name='marc-bibframe-map') }}">MARC-to-BIBFRAME</a>
+    </li>
+    <li class="nav-item{% if request.path.endswith("bibcat") %} active{% endif %}">
+      <a class="nav-link" href="{{ url_for('page', name='bibcat') }}">BIBCAT 2.0</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="{{ url_for('page', name='description') }}">About</a>
     </li>
   </ul>
-  <form class="form-inline pull-xs-right">
-    <input class="form-control" type="text" placeholder="Search">
-    <button class="btn btn-success-outline" type="submit">Search</button>
-  </form>
 </nav>
