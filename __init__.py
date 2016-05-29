@@ -14,4 +14,4 @@ def page(name=None):
     return render_template(template_name)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', debug=True)
