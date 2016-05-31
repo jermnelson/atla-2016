@@ -2,7 +2,7 @@
   <a class="navbar-brand" href="{{ url_for('page') }}">ATLA 2016 - BIBFRAME Workshop</a>
   <ul class="nav navbar-nav">
     <li class="nav-item {% if request.path.endswith("/") %}active{% endif %}">
-      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="{{ url_for('page', name='index') }}">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item {% if request.path.endswith("linked-data-intro") %}active{% endif %}">
       <a class="nav-link" href="{{ url_for('page', name='linked-data-intro') }}">Linked Data</a>

@@ -7,10 +7,14 @@
     <div class="col-md-6">
     <p class="lead">
     Libraries and cultural heritage organizations are shifting 
-    from MARC21 and XML  metadata standards to Linked-Data vocabularies.
+    from MARC21 and XML  metadata standards to Linked-Data vocabularies. 
+    <a href="https://www.w3.org/2005/Incubator/lld/XGR-lld-20111025/">Library Linked Data</a> id
+    an international effort to bring machine-readable data to the web. Library Linked Data is 
+    based on a RDF (Resource Description Framework) graphs made up a series of statements, called triples, 
+    that take the form <strong>subject - predicate - object</strong>.
     </p>
     <p class="lead">Linked Data is about representing information
-    in statements called RDF Triples i.e. subject-predicate-object.
+    in RDF Triples i.e. subject-predicate-object.
     like <a href="http://bibframe.org">BIBFRAME</a> and 
     <a href="http://schema.org">Schema.org.</a> 
     <a href="http://www.rdaregistry.info/">RDA</a> and 
@@ -18,7 +22,65 @@
     Linked Data triples as well.
     </div>
     <div class="col-md-6">
+        {# START Graph card #}
+        <div class="card">
+            <img class="card-img-top" src="{{ url_for("static", filename="img/graph_usairways_bundled.jpg") }}"
+            style="width: 500px"><a href="#" class="pull-right">source</a>
+            <div class="card-block">
+                <h4 class="card-title">What is a Graph?</h4>
+                <p class="card-text">
+                    A graph data structure is made up <em>nodes</em> (also known as vertices or points) with 
+                    connections between the nodes called <em>edges</em> or <em>directed edges</em> (also referred
+                    to as arcs or lines)
+                </p>
+                <p class="card-text">
+                    Graphs are used to describe transportation systems, computer networks, and social relationships.
+                    Graphs easily support heterogeneous environments with different vocabularies that can scale to 
+                    billions (if not trillions) of nodes and edges. 
+                </p>
+            </div>
+        {# END Graph card #}
+        </div>
     </div>
-	  
 </div>
+<hr>
+<h2>RDF Graphs</h2>
+<p class="lead">
+    Linked Data in libraries is constructed using RDF Graphs, a type of directed graphs, where the nodes are made up
+    of either IRI (international resource indicator i.e. URLs or URIs), Blank Nodes (a type of identifier placeholder 
+    in a RDF graph), or literal values. 
+</p>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card card-success">
+            <h3 class="card-header">Subjects</h3>
+            <div class="card-block">
+                <p class="card-text">Subjects must be either an IRI or a Blank Node</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card card-danger">
+            <h3 class="card-header">Predicates</h3>
+            <div class="card-block">
+                <p class="card-text">A relationship between the <em>subject</em> and <em>object</em> is often
+                called a property.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card card-info">
+            <h3 class="card-header">Objects</h3>
+            <div class="card-block">
+                <p class="card-text">Object must be an IRI, blank node, or Literal Value.</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<hr>
+<h2>Linked Data Examples</h2>
+<hr>
+<h2>Exercises</h2>
 {% endblock %}

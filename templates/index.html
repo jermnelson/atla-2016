@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
 {% block main %}
-<img src="{{ url_for("static", filename="img/merit-badge-1.png") }}" 
+<a href="{{ url_for('page', name="open-badge") }}">
+  <img src="{{ url_for("static", filename="img/merit-badge-1.png") }}" 
      style="height: 400px"
-     class="img-thumbnail pull-xs-right">
+     class="img-thumbnail pull-xs-right"></a>
 <h3>ATLA 2016 - Long Beach</h3>
 <h1>BIBFRAME &amp; Linked Data Workshop</h1>
 <div class="row">
@@ -12,10 +13,15 @@
         <ul class="lead">
             <li><a href="{{ url_for("page", name="linked-data-intro") }}">What is
                 Linked Data?</a></li>
+            <li><a href="{{ url_for("page", name="bibframe") }}">BIBFRAME &amp; Schema.org</a></li>
         </ul>
     </section>
     <section class="col-md-6">
         <h2 class="bg-primary text-xs-center">Afternoon</h2>
+        <ul class="lead">
+            <li><a href="{{ url_for("page", name="marc-bibframe-map") }}">MARC-to-BIBFRAME</a></li>
+            <li><a href="{{ url_for("page", name="bibcat") }}">BIBCAT</a></li>
+        </ul>
     </section>
 </div>
 {% endblock %}
