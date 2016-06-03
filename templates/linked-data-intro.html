@@ -46,16 +46,33 @@
 <hr>
 <h2>RDF Graphs</h2>
 <p class="lead">
-    Linked Data in libraries is constructed using RDF Graphs, a type of directed graphs, where the nodes are made up
-    of either IRI (international resource indicator i.e. URLs or URIs), Blank Nodes (a type of identifier placeholder 
-    in a RDF graph), or literal values. 
+    Linked Data in libraries is constructed using Resource Description Framework (RDF) graphs, 
+    a type of directed graphs, where the nodes are made up
+    of either IRI (international resource indicator i.e. URLs or URIs), blank nodes (a 
+    type of identifier placeholder in a RDF graph), or literal values. Originating with the 
+    World Wide Web Consortium (W3C) specifications, RDF graphs are built using three element 
+    statements called <strong>triples</strong> that model relationships between resources, 
+    IRIs, and descriptive information.
 </p>
+<p class="lead">
+    In a RDF triple, the first element is called a <strong>subject</strong> and represents 
+    a resource with the second element, the <strong>predicate</strong>, describing an aspect
+    that connects to the third element, an <strong>object</strong> made up a value. One or more
+    triples make up a RDF graph.  
+</p>
+<h3>The big shift for libraries &hellip;</h3>
+<h1>Managing records (MARC) to managing triples (BIBFRAME, Schema.org)
+</h1>
+<br>
+<img src="{{ url_for('static', filename='img/triple.svg') }}" class="img-thumbnail center-block">
+<br>
 <div class="row">
     <div class="col-md-4">
         <div class="card card-success">
             <h3 class="card-header">Subjects</h3>
             <div class="card-block">
-                <p class="card-text">Subjects must be either an IRI or a Blank Node</p>
+                <p class="card-text">Subjects must be either an IRI or a blank node and
+                represents the resource or entity</p>
             </div>
         </div>
     </div>
@@ -63,8 +80,9 @@
         <div class="card card-danger">
             <h3 class="card-header">Predicates</h3>
             <div class="card-block">
-                <p class="card-text">A relationship between the <em>subject</em> and <em>object</em> is often
-                called a property.</p>
+                <p class="card-text">A relationship between the <em>subject</em> and 
+                <em>object</em> is a <strong><em>predicate</em></strong>, also 
+                called a property. A predicate can only be an IRI.</p>
             </div>
         </div>
     </div>
@@ -72,7 +90,8 @@
         <div class="card card-info">
             <h3 class="card-header">Objects</h3>
             <div class="card-block">
-                <p class="card-text">Object must be an IRI, blank node, or Literal Value.</p>
+                <p class="card-text">Object must be either an IRI, blank node, or 
+                literal value.</p>
             </div>
         </div>
 
