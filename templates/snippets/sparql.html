@@ -2,4 +2,23 @@
 <p class="lead">Much of the power and flexibility of RDF graph databases comes from a query/update 
 language called SPARQL - short for <strong>SPARQL Protocol and RDF Query Language</strong> - that
 allows you to search and manipulate the subject, predicate, and objects in your triplestore.</p>
-
+<h3 class="bg-info">Example 1: Retrieving all triples</h3>
+<div class="row">
+    <section class="col-md-3">
+        <p class="lead">One of the simplest SPARQL queries is to simply retrieve all triples
+        in a triplestore.</p>
+        <p>In this SPARQL query, the <strong>SELECT</strong> and <strong>WHERE</strong> are 
+        reserved keywords. In the <strong>SELECT</strong> row, three variables are outputted to the 
+        calling client that filters the query based on the contents in <strong>WHERE</strong>
+        clause, in this case just returning all triple patterns.</p>
+ 
+    </section>
+    <section class="col-md-9">
+    <pre class="prettyprint" style="font-size: 1.5em">
+SELECT ?subject ?predicate ?object
+WHERE {
+	?subject ?predicate ?object .
+}
+    </pre>
+    </section>
+</div>

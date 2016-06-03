@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h3>ATLA 2016 - Long Beach</h3>
+<h2>Glossary</h2>
+<dl class="lead">
+    <dt><a name="object"></a>Object</a></dt>
+    <dd>The third element of a <a href="#triple">triple</a>, </dd>
+    <dt><a name="predicate"></a>Predicate</a></dt>
+    <dd>The second element of a <a href="#triple">triple</a>, it is a trait or property </dd>
+    <dt><a name="RDF"></a>RDF</dt>
+    <dd>Short for Resource Description Framework, RDF is a directed and named graph 
+    technology created by W3C.</dd>
+    <dt><a name="subject"></a>Subject</a></dt>
+    <dd>The first element of <a href="#triple">triple</a>, </dd>
+    <dt><a name="triple"></a>Triple</dt>
+    <dd>The fundamental structure of RDF graphs, a triple statement is made up of
+    three elements; <a href="#subject">subject</a>, <a href="#predicate">predicate</a>,
+    and <a href="#object">object</a>.</dd>
+
+</dl>
+{% endblock %}

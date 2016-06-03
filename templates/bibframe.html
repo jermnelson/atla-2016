@@ -3,4 +3,18 @@
 {% block main %}
 <h3>ATLA 2016 - Long Beach</h3>
 <h2>BIBFRAME</h2>
+<p class="lead">
+    The BIBFRAME Initiative was started by the Library of Congress in 2011 with the intent to
+    "integrate with and engage in the wider information community and still serve the very
+    specific needs of libraries."<sup><a href="https://www.loc.gov/bibframe/faqs/">1</a></sup> 
+</p>
+<h2 class="text-xs-center bg-primary">BIBFRAME 2.0</h2>
+<img src="{{ url_for('static', filename='img/bf2-model.jpg') }}" class="img-thumbnail">
+<hr>
+{% include 'snippets/work.html' %}
+<hr>
+{% include 'snippets/instance.html' %}
+<hr>
+{% include 'snippets/item.html' %}
+
 {% endblock %}
