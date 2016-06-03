@@ -5,14 +5,55 @@ N-Triples, N-Quads, and N3.</p>
 <div class="row">
     <div class="col-md-6">
         <h3>RDF/XML</h3>
+        <pre>
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://en.wikipedia.org/wiki/Religion">
+    <rdfs:label>Religion</rdfs:label>
+    <bf:Topic rdf:resource="http://id.loc.gov/authorities/subjects/sh85112549"/>
+  </rdf:Description>
+</rdf:RDF>
+        </pre>
     </div>
     <div class="col-md-6">
         <h3>Turtle (Terse RDF Triple Language) &amp; N3 (Notation3)</h3>
+        <pre>
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://en.wikipedia.org/wiki/Religion> rdfs:label "Religion" ;
+    bf:Topic <http://id.loc.gov/authorities/subjects/sh85112549> .
+
+</pre>
     </div>
 </div>
 <div class="row">
     <div class="col-md-6">
         <h3>JSON-LD</h3>
+        <pre>
+[
+  {
+    "@id": "https://en.wikipedia.org/wiki/Religion",
+    "http://id.loc.gov/ontologies/bibframe/Topic": [
+      {
+        "@id": "http://id.loc.gov/authorities/subjects/sh85112549"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Religion"
+      }
+    ]
+  }
+]
+        </pre>
     </div>
     <div class="col-md-6">
         <h3>N-Triples &amp; N-Quads</h3>
