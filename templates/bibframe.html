@@ -8,13 +8,101 @@
     "integrate with and engage in the wider information community and still serve the very
     specific needs of libraries."<sup><a href="https://www.loc.gov/bibframe/faqs/">1</a></sup> 
 </p>
-<h2 class="text-xs-center bg-primary">BIBFRAME 2.0</h2>
-<img src="{{ url_for('static', filename='img/bf2-model.jpg') }}" class="img-thumbnail">
-<hr>
-{% include 'snippets/work.html' %}
-<hr>
-{% include 'snippets/instance.html' %}
-<hr>
-{% include 'snippets/item.html' %}
+<h2 class="text-xs-center bg-success">History of BIBFRAME</h2>
 
+<h2 class="text-xs-center bg-primary">BIBFRAME 2.0</h2>
+<div class="row">
+    <section class="col-md-5">
+    <img src="{{ url_for('static', filename='img/bf2-model.jpg') }}" class="img-thumbnail">
+    source: <a href="https://www.loc.gov/bibframe/docs/bibframe2-model.html">https://www.loc.gov/bibframe/docs/bibframe2-model.html</a>
+    </section>
+    <section class="col-md-4">
+    <div class="card">
+        <div class="card-block">
+        <h4 class="card-title"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Work</h4>
+        <p class="card-text">
+        A BIBFRAME <strong>Work</strong> "reflects the conceptual essence of the cataloged resource:  authors, languages, 
+        and what it is about (subjects)" and is the most abstract and general resource.
+        </p>
+        <a href="#work" class="btn btn-info">Details &hellip;</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-block text-xs-right">
+        <h4 class="card-title"><i class="fa fa-commenting-o" aria-hidden="true"></i> Instance</h4>
+        <p class="card-text">
+        A BIBFRAME <strong>Instance</strong> "reflects information such as its publisher, place and date of publication, and format"
+        and embodies a <strong>Work</strong> in one or more descriptive and less abstract resources.  
+        </p>
+        <a href="#instance" class="btn btn-info">Details &hellip;</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-block">
+        <h4 class="card-title"><i class="fa fa-file-text" aria-hidden="true"></i> Item</h4>
+        <p class="card-text">A BIBFRAME <strong>Instance</strong> "reflects information such as 
+        its location (physical or virtual), shelf mark, and barcode" of one or more <strong>Instances</strong>
+        and represents the physical or actual digital object as a resource.</p>
+        <a href="#item" class="btn btn-info">Details &hellip;</a>
+        </div>
+    </div>
+    </section>
+    <section class="col-md-3">
+        <div class="btn-group-vertical">
+            <a href="#agents-dlg" class="btn btn-warning" data-toggle="modal">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Agents</a>
+            <a href="#subjects-dlg" class="btn btn-warning" class="btn btn-warning" data-toggle="modal">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <i class="fa fa-tag" aria-hidden="true"></i>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                Subjects</a>
+            <a href="#events-dlg" class="btn btn-warning" data-toggle="modal">
+                <i class="fa fa-microphone" aria-hidden="true"></i>
+                <i class="fa fa-music" aria-hidden="true"></i>
+                <i class="fa fa-video-camera" aria-hidden="true"></i>
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>
+
+                Events</a>
+            <br>
+            <a href="#format-dlg" class="btn btn-secondary" data-toggle="modal">
+                <i class="fa fa-book" aria-hidden="true"></i>
+                <i class="fa fa-cloud" aria-hidden="true"></i>
+                format</a>
+            <a href="#publisher-dlg" class="btn btn-secondary" data-toggle="modal">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <i class="fa fa-home" aria-hidden="true"></i>
+                publisher</a>
+            <br>
+            <a href="#barcode-dlg" class="btn btn-secondary" data-toggle="modal">
+                <i class="fa fa-barcode" aria-hidden="true"></i>
+                barcode
+            </a>
+            <a href="#held-by-dlg" class="btn btn-secondary" data-toggle="modal">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <i class="fa fa-home" aria-hidden="true"></i>
+                held by
+            </a>
+        </div>
+
+    </section>
+</div>
+<hr>
+<div class="row">
+{% include 'snippets/work.html' %}
+{% include 'snippets/instance.html' %}
+{% include 'snippets/item.html' %}
+</div>
+{% endblock %}
+
+{% block dialogs %}
+{% include 'snippets/agents-dlg.html' %}
+{% include 'snippets/subjects-dlg.html' %}
+{% include 'snippets/events-dlg.html' %}
+{% include 'snippets/format-dlg.html' %}
+{% include 'snippets/publisher-dlg.html' %}
+{% include 'snippets/barcode-dlg.html' %}
+{% include 'snippets/held-by-dlg.html' %}
 {% endblock %}
