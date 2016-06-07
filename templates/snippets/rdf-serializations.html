@@ -87,7 +87,7 @@ N-Triples.</p>
     </div>
     <div class="col-md-7">
 
-        <pre class="prettyprint">
+        <pre class="prettyprint lang-html">
 &lt;https://en.wikipedia.org/wiki/Religion&gt; &lt;http://id.loc.gov/ontologies/bibframe/Topic&gt; &lt;http://id.loc.gov/authorities/subjects/sh85112549&gt; .
 &lt;https://en.wikipedia.org/wiki/Religion&gt; &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; "Religion" .
         </pre>
@@ -101,7 +101,7 @@ N-Triples.</p>
 </p>
 <div class="row">
     <section class="col-md-9">
-    <pre class="prettyprint">
+    <pre class="prettyprint py">
 >>> import rdflib    
 >>> religion = rdflib.Graph()
 >>> wikipedia_religion_uri = rdflib.URIRef("https://en.wikipedia.org/wiki/Religion")
@@ -115,14 +115,14 @@ N-Triples.</p>
 	 BF.Topic,
 	 rdflib.URIRef("http://id.loc.gov/authorities/subjects/sh85112549")))
 >>> print(religion.serialize(format='turtle').decode())
-@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bf: &lt;http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: &lt;http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#> .
 
-<https://en.wikipedia.org/wiki/Religion> rdfs:label "Religion"@en ;
-    bf:Topic <http://id.loc.gov/authorities/subjects/sh85112549> .
+&lt;https://en.wikipedia.org/wiki/Religion> rdfs:label "Religion"@en ;
+    bf:Topic &lt;http://id.loc.gov/authorities/subjects/sh85112549&gt; .
 
 </pre>
 

@@ -1,15 +1,71 @@
+<a name="instance"></a>
 <div class="jumbotron">
 <h1 class="text-xs-center"><i class="fa fa-commenting-o fa-4x" aria-hidden="true"></i> <br>Instance</h1>
-<a name="instance"></a>
 <div class="row">
     <section class="col-md-4">
         <h2>RDF Class</h2>
+        <p>Like a BIBFRAME <a href="#work">Work</a>, a BIBFRAME Instance is a RDF Resource
+        subclass. A BIBFRAME Instance combines characteristics of both a FRBR Expression and
+        Manifestation.</p>
+        <h3>RDF Properties</h3>
+        <p>A BIBFRAME Instance has the following properties:</p> 
+        <ul>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_carrier">carrier</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_provisionActivity">provisionActivity</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_extent">extent</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_baseMaterial">baseMaterial</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_appliedMaterial">appliedMaterial</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_emulsion">emulsion</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_mount">mount</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_productionMethod">productionMethod</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_generation">generation</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_layout">layout</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_bookFormat">bookFormat</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_fontSize">fontSize</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_polarity">polarity</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_reductionRatio">reductionRatio</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_soundCharacteristic">soundCharacteristic</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_projectionChracteristic">projectionChracteristic</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_videoCharacteristic">videoCharacteristic</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_digitalCharacteristic">digitalCharacteristic</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_instanceOf">instanceOf</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_hasItem">hasItem</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_issuedWith">issuedWith</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_otherPhysicalFormat">otherPhysicalFormat</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_hasReproduction">hasReproduction</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_reproductionOf">reproductionOf</a></li>
+        </ul>
+        <h3>RDF Sub Classes</h3>
+        <p>The BIBFRAME Instance is also the parent class for a number of different types of Instances listed
+           below:</p>
+        <ul>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_Print">Print</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_Manuscript">Manuscript</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_Archival">Archival</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_Tactile">Tactile</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_Electronic">Electronic</a></li>
+        </ul>
     </section>
-    <section class="col-md-4">
+    <section class="col-md-8">
         <h2>RDF Graph Examples</h2>
+        <h3><i class="fa fa-book" aria-hidden="true"></i> Print Instance</h3>
+        <pre class="prettyprint">
+&lt;http://bibcat.org/Instance/b96aa86c-2cfa-11e6-8471-005056c00008&gt; a bf:Instance,
+        bf:Print ;
+    bf:instanceOf &lt;https://lccn.loc.gov/12032828&gt; ;
+    bf:provisionActivity [ a bf:Publication ;
+            bf:copyrightDate 1887 ;
+            relator:pbl &lt;http://id.loc.gov/authorities/names/n88002745&gt; ] .
+
+&lt;http://id.loc.gov/authorities/names/n88002745&gt; a bf:Organization ;
+    rdfs:label "Houghton, Mifflin and Company" .
+        </pre>
     </section>
-    <section class="col-md-4">
-        <h2>Linking</h2>
-    </section>
+        <h3><i class="fa fa-volume-up" aria-hidden="true"></i> Audio Instance</h3>
+        <p>BIBFRAME 2.0 does not currently have an audio instance type, so to represent an
+        audio instance, the more general BIBFRAME Instance class is used.</p>
+        <pre  class="prettyprint">
+        
+        </pre>
 </div>
 </div>

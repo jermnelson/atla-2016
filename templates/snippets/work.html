@@ -1,15 +1,122 @@
+<a name="work"></a>
 <div class="jumbotron">
 <h1 class="text-xs-center"><i class="fa fa-lightbulb-o fa-4x" aria-hidden="true"></i> <br>Work</h1>
-<a name="work"></a>
 <div class="row">
     <section class="col-md-4">
         <h2>RDF Class</h2>
+        <p class="lead">The BIBFRAME Work is related to the FRBR concept of a Work but unlike FRBR,
+        a BIBFRAME Work is actually a sub-class of a more general or abstract class derived from a
+        RDFS <a href="https://www.w3.org/TR/rdf-schema/#ch_resource">Resource</a>, making BIBFRAME
+        a linked-data vocabulary.</p>
+        <h3>RDF Properties</h3>
+        <p>A BIBFRAME Work has the following properties:</p> 
+        <ul>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_content">content</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_originPlace">originPlace</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_musicMedium">musicMedium</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_instrument">instrument</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_ensemble">ensemble</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_voice">voice</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_hasInstance">hasInstance</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_hasExpression">hasExpression</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_expressionOf">expressionOf</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_eventContentOf">eventContentOf</a></li>
+        </ul>
+        <h3>RDF Sub Classes</h3>
+        <p>The BIBFRAME Work is also the parent class for a number of different types of Works listed
+           below:</p>
+        <ul>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_Text">Text</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_Cartography">Cartography</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_Audio">Audio</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_NotatedMusic">NotatedMusic</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_NotatedMovement">NotatedMovement</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_Dataset">Dataset</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_StillImage">StillImage</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_MovingImage">MovingImage</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_Object">Object</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_Multimedia">Multimedia</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#c_MixedMaterial">MixedMaterial</a></li>
+        </ul>
     </section>
-    <section class="col-md-4">
-        <h2>RDF Graph Examples</h2>
-    </section>
-    <section class="col-md-4">
-        <h2>Linking</h2>
+    <section class="col-md-8">
+        <h2>RDF Graph Examples (turtle formated)</h2>
+        <h3><i class="fa fa-book" aria-hidden="true"></i><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Text</h3>
+        <blockquote class="blockquote">
+ 	Resource intended to be perceived visually and understood through the use of language in written or spoken form.
+        <footer class="blockquote-footer">
+            <a href="http://id.loc.gov/ontologies/bibframe.html#c_Text">BIBFRAME 2.0 Vocabulary List View</a>
+        </footer>
+        </blockquote>
+        <pre class="prettyprint lang-html">
+&lt;https://lccn.loc.gov/12032828&gt; a bf:Text ;
+    bf:title [ a bf:WorkTitle ;
+            bf:mainTitle "The pioneer Quakers" ] ;
+    relator:aut  &lt;http://id.loc.gov/authorities/names/nr89010376&gt; .
+
+
+&lt;http://id.loc.gov/authorities/names/nr89010376&gt; rdfs:label "Richard Hallowell" .
+        </pre>
+        <h3><i class="fa fa-volume-up" aria-hidden="true"></i> Audio</h3>
+        <blockquote class="blockquote">
+       	Resources expressed in an audible form, including music or other sounds.
+        <footer class="blockquote-footer">
+            <a href="http://id.loc.gov/ontologies/bibframe.html#c_Audio">BIBFRAME 2.0 Vocabulary List View</a>
+        </footer>
+        </blockquote>
+        <pre class="prettyprint lang-html">
+&lt;https://lccn.loc.gov/85751262&gt; a bf:Audio ;
+    bf:musicMedium [ a bf:MusicMedium ;
+            rdfs:label "Libretto" ],
+        [ a bf:MusicMedium ;
+            rdfs:label "Oratorio" ] ;
+    bf:title [ a bf:WorkTitle ;
+            rdfs:label "Messiah" ] ;
+    bf:voice [ a bf:MusicVoice ;
+            rdfs:label "mixed" ] ;
+    relator:cmp &lt;http://id.loc.gov/authorities/names/n79105494&gt; .
+
+&lt;http://id.loc.gov/authorities/names/n79105494&gt; rdfs:label "George Frideric Handel" .
+        
+        </pre>
+        <h3><i class="fa fa-database" aria-hidden="true"></i> Dataset</h3>
+        <blockquote class="blockquote">
+        Data encoded in a defined structure. Includes numeric data, environmental data,etc., used by 
+        applications software to calculate averages, correlations, etc., or to produce models, etc., but not 
+        normally displayed in its raw form.
+        <footer class="blockquote-footer">
+            <a href="http://id.loc.gov/ontologies/bibframe.html#c_Dataset">BIBFRAME 2.0 Vocabulary List View</a>
+        </footer>
+
+        </blockquote>
+        <pre class="prettyprint lang-html">
+[] a bf:Dataset ;
+    bf:content &lt;http://data.un.org/Data.aspx?q=religion&d=POP&f=tableCode%3a28%3brefYear%3a2010&c=2,3,6,8,10,12,14,15,16&s=_countryEnglishNameOrderBy:asc,refYear:desc,areaCode:asc&v=1&gt; ;
+    bf:title [ a bf:WorkTitle ;
+            rdfs:label "Population by religion, sex and urban/rural residence for 2011" ] ;
+    relator:cre &lt;http://data.un.org/&gt; .
+        </pre>
+        <h3><i class="fa fa-film" aria-hidden="true"></i> MovingImage</h3>
+        <blockquote class="blockquote">
+       	Images intended to be perceived as moving, including motion pictures (using 
+        liveaction and/or animation), video recordings of performances, events,etc.
+        <footer class="blockquote-footer">
+            <a href="http://id.loc.gov/ontologies/bibframe.html#c_Dataset">BIBFRAME 2.0 Vocabulary List View</a>
+        </footer>
+        </blockquote>
+        <pre class="prettyprint lang-html">
+&lt;http://tiger.coloradocollege.edu/record=b2348805&gt; a bf:MovingImage ;
+    bf:title [ a bf:WorkTitle ;
+            rdfs:label "The ten commandments" ] ;
+    relator:act &lt;https://en.wikipedia.org/wiki/Anne_Baxter&gt;,
+        &lt;https://en.wikipedia.org/wiki/Charlton_Heston&gt;,
+        &lt;https://en.wikipedia.org/wiki/Yul_Brynner&gt; ;
+    relator:drt &lt;http://id.loc.gov/authorities/names/n80073529&gt; ;
+    schema:url &lt;https://en.wikipedia.org/wiki/The_Ten_Commandments_(1956_film)&gt; .
+
+&lt;http://id.loc.gov/authorities/names/n80073529&gt; a bf:Person ;
+    rdfs:label "Cecil B. DeMille" .
+        </pre> 
     </section>
 </div>
 </div>
