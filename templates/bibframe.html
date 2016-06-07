@@ -95,6 +95,11 @@
 {% include 'snippets/instance.html' %}
 {% include 'snippets/item.html' %}
 </div>
+<p class="text-xs-right">
+    <a class="btn btn-primary btn-lg" href="{{ url_for('page', name='marc-bibframe-map') }}">MARC-to-BIBFRAME
+    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+</a>
+</p>
 {% endblock %}
 
 {% block dialogs %}
