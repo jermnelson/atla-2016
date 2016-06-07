@@ -1,5 +1,5 @@
 <div class="modal fade" id="subjects-dlg">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -10,6 +10,7 @@
             <i class="fa fa-home" aria-hidden="true"></i>
             <i class="fa fa-tag" aria-hidden="true"></i>
             <i class="fa fa-map-marker" aria-hidden="true"></i>
+
             Subjects
         </h4>
       </div>
@@ -24,9 +25,18 @@
             </footer>
 
           </blockquote>
-          <h5><i class="fa fa-user" aria-hidden="true"></i>BIBFRAME People</h5>
-
-        <p>One fine body&hellip;</p>
+        <h5><i class="fa fa-user" aria-hidden="true"></i>BIBFRAME Person</h5>
+        <p>A BIBFRAME Person can serve as a subject for an BIBFRAME Work or Instance.</p>
+        <div class="row">
+            <section class="col-md-8">
+            <pre class="prettyprint">
+&lt;http://bibcat.org/f2f0aa80-2c55-11e6-811c-a8667f19014b&gt; a bf:Work;
+    bf:subject [ a bf:Person ;
+        owl:sameAs http://id.loc.gov/authorities/names/n78095603 ;
+        ] .
+            </pre>
+            </section>
+        </div>
         <h5><i class="fa fa-home" aria-hidden="true"></i>BIBFRAME Organizations</h5>
         <h5><i class="fa fa-tag" aria-hidden="true"></i> BIBFRAME Topics</h5>
         <h5><i class="fa fa-map-marker" aria-hidden="true"></i> BIBFRAME Cartographic</h5>
