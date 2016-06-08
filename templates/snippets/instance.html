@@ -25,7 +25,7 @@
             <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_polarity">polarity</a></li>
             <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_reductionRatio">reductionRatio</a></li>
             <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_soundCharacteristic">soundCharacteristic</a></li>
-            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_projectionChracteristic">projectionChracteristic</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_projectionChracteristic">projectionCharacteristic</a></li>
             <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_videoCharacteristic">videoCharacteristic</a></li>
             <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_digitalCharacteristic">digitalCharacteristic</a></li>
             <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_instanceOf">instanceOf</a></li>
@@ -80,6 +80,23 @@
         <pre class="prettyprint">
 &lt;http://bibcat.org/Instance/ce342a40-2d7d-11e6-927b-ac87a3129ce6&gt; a bf:Electronic ;
     bf:instanceOf &lt;http://bibcat.org/Work/84330c68-2d7d-11e6-8b16-ac87a3129ce6&gt;
+    bf:digitalCharacteristic [ a bf:FileType ;
+            rdf:value "XML" ],
+        [ a bf:EncodingFormat ;
+            rdf:value "application/xml" ],
+        [ a bf:FileSize ;
+            rdf:value "937 KB" ];
+    rdfs:label "XML download of Population by religion, sex, and urban/rural residence for 2011" .
+
+&lt;http://bibcat.org/Instance/e68986ec-2db6-11e6-9e8a-005056c00008&gt; a bf:Electronic ;
+    rdfs:label "CSV download of Population by religion, sex, and urban/rural residence for 2011" ;
+    bf:digitalCharacteristic [ a bf:EncodingFormat ;
+            rdf:value "text/csv" ],
+        [ a bf:FileType,
+            rdf:value "Comma separated values" ],
+        [ a bf:FileSize,
+            rdf:value "213 KB" ];
+    bf:instanceOf &lt;http://bibcat.org/Work/84330c68-2d7d-11e6-8b16-ac87a3129ce6&gt; .
 
         </pre>
     </section>

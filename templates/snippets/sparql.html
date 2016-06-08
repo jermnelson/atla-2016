@@ -22,3 +22,26 @@ WHERE {
     </pre>
     </section>
 </div>
+<h3 class="bg-info">Example 2: Retrieving all subjects of a particular type</h3>
+<div class="row">
+    <section class="col-md-9">
+     <pre class="prettyprint" style="font-size: 1.5em">
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX schema: &lt;http://schema.org/&gt; 
+
+SELECT DISTINCT ?subject 
+WHERE {
+    ?subject rdf:type schema:Book .
+} ORDER BY ?subject
+    </pre>
+    </section>
+    <section class="col-md-3">
+        <p class="lead">
+            This query returns all of the subjects in the triplestore that have a type (class) 
+            of the <a href="http://schema.org/Book">http://schema.org/Book</a>. The <strong>ORDER BY</strong>
+            clause returns the subjects in ascending order in an alpha-numerical sort.
+        </p>
+    </section>
+</div>
+<h3 class="bg-info">Example 3: Retrieving all subjects of a particular type</h3>
+
