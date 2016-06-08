@@ -75,8 +75,8 @@
             rdf:value "33 1/3 rpm" ] . 
         </pre>
         <h3><i class="fa fa-database" aria-hidden="true"></i> Dataset Electronic Instances</h3>
-        <p>In this example, we will create two instances of our UN BIBFRAME Dataset, one for the XML
-        format and the other for the CSV format.</p>
+        <p>In this example, we will create two instances of our United Nations BIBFRAME 
+        Dataset, one for the XML format and the other for the CSV format.</p>
         <pre class="prettyprint">
 &lt;http://bibcat.org/Instance/ce342a40-2d7d-11e6-927b-ac87a3129ce6&gt; a bf:Electronic ;
     bf:instanceOf &lt;http://bibcat.org/Work/84330c68-2d7d-11e6-8b16-ac87a3129ce6&gt;
@@ -99,6 +99,18 @@
     bf:instanceOf &lt;http://bibcat.org/Work/84330c68-2d7d-11e6-8b16-ac87a3129ce6&gt; .
 
         </pre>
+        <h3><i class="fa fa-film" aria-hidden="true"></i> Film/DVD Instance</h3>
+        <pre class="prettyprint">
+&lt;http://bibcat.org/Instance/10e18ff4-2dba-11e6-9a7b-005056c00008&gt; a bf:Instance ;
+    bf:carrier [ a bf:Carrier ;
+            rdf:value "videodisc" ] ;
+    bf:instanceOf &lt;http://tiger.coloradocollege.edu/record=b2348805&gt; ;
+    bf:note [ a bf:Note ;
+            rdfs:label "Filmed in Egypt and the Sinai with one of the biggest sets ever constructed for a motion picture, this version tells the story of the life of Moses. Once favored in the Pharaoh's bousehold, Moses turned his back on a privileged life to lead his people to freedom" ;
+            bf:noteType "summary" ] ;
+    bf:videoCharacteristic [ a bf:VideoFormat ;
+            rdf:value "DVD NTSC Region 1, widescreen enhanced for 16:0 TVs" ] .
+        </pre>      
     </section>
 </div>
 </div>
