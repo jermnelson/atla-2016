@@ -26,23 +26,97 @@
 
           </blockquote>
         <h5><i class="fa fa-user" aria-hidden="true"></i>BIBFRAME Person</h5>
-        <p>A BIBFRAME Person can serve as a subject for an BIBFRAME Work or Instance.</p>
+        <p>A BIBFRAME Person can serve as a bibliographic "subject" for a BIBFRAME Work or Instance.</p>
+
         <div class="row">
             <section class="col-md-8">
             <pre class="prettyprint">
 &lt;http://bibcat.org/f2f0aa80-2c55-11e6-811c-a8667f19014b&gt; a bf:Work;
     bf:subject [ a bf:Person ;
-        owl:sameAs http://id.loc.gov/authorities/names/n78095603 ;
+        owl:sameAs &lt;http://id.loc.gov/authorities/names/n78095603&gt; ;
+        rdfs:label "Francis, of Assisi, Saint, 1182-1226"@en
         ] .
             </pre>
             </section>
         </div>
         <h5><i class="fa fa-home" aria-hidden="true"></i>BIBFRAME Organizations</h5>
+        <p>A BIBFRAME Organization can serve as a bibliographic "subject" for a BIBFRAME Work or Instance.</p>
+        <pre class="prettyprint">
+&lt;http://bibcat.org/a02e8a76-2e78-11e6-97dd-005056c00008&gt; a bf:Text ;
+    bf:identifiedBy [ a bf:Isbn ;
+            rdf:value "0837195349" ] ;
+    bf:subject &lt;http://id.loc.gov/authorities/names/n87858369&gt; ;
+    bf:title [ a bf:WorkTitle ;
+            rdfs:label "Buddhism in America : the social organization of an ethnic religious institution"@en ] ;
+    relator:aut &lt;http://id.loc.gov/authorities/names/no99078102&gt; .
+
+&lt;http://id.loc.gov/authorities/names/n87858369&gt; rdfs:label "Buddhist Churches of America"@en .
+
+        </pre>
         <h5><i class="fa fa-tag" aria-hidden="true"></i> BIBFRAME Topics</h5>
+        <p>Concept or area of knowledge, the BIBFRAME Topic class can be used for Library of Congress Subject
+        Headings and server as the bibliographic "subject" to BIBFRAME Works, Instances, or Items.</p>
+        <pre class="prettyprint">
+&lt;http://bibcat.org/0f625458-2e7f-11e6-b676-005056c00008&gt; a bf:Electronic ;
+    rdfs:label "What is Islam? : the importance of being Islamic / by Shahab Ahmed"@en ;
+    bf:identifiedBy [ a bf:Isbn ;
+            rdf:value "9781400873586 (electronic bk.)" ] ;
+    bf:subject [ a bf:Topic ;
+            rdfs:label "Islam"@en ;
+            schema:url &lt;http://id.loc.gov/authorities/subjects/sh85068390&gt; ] ;
+    bf:title [ a bf:InstanceTitle ;
+            bf:mainTitle "What is Islam?"@en ;
+            bf:subtitle "the importance of being Islamic"@en ] .
+        </pre>
         <h5><i class="fa fa-map-marker" aria-hidden="true"></i> BIBFRAME Cartographic</h5>
+        <p>A resource representing all or part of the earth or any celestial body including 
+        imaginary places.</p>
+        <pre class="prettyprint">
+&lt;http://www.worldcat.org/oclc/182764733&gt; a bf:Cartography ;
+    bf:copyrightDate "2007" ;
+    bf:subject ( [ a bf:Cartographic ;
+                rdfs:label "India"@en ;
+                rdf:rest [ a bf:Topic ;
+                        rdfs:label "Religion"@en ;
+                        rdf:rest [ a bf:Topic ;
+                                rdfs:label "Maps"@en ] ] ] ) ;
+    bf:title [ a bf:WorkTitle ;
+            rdfs:label "Cultural heritage atlas of India" ] .
+
+        </pre>
+        <h5><i class="fa fa-clock-o" aria-hidden="true"></i> BIBFRAME Temporal</h5>
+        <p>
+        Chronological period serving as a "subject" for a Work, Instance, or Item
+        </p>
+        <pre class="prettyprint">
+&lt;http://bibcat.org/1ffe5426-2e89-11e6-8c87-005056c00008&gt; a bf:Text ;
+    bf:subject &lt;http://id.loc.gov/authorities/subjects/sh96005475&gt; ;
+    bf:title [ a bf:WorkTitle ;
+            rdfs:label "Progressive and conservative religious ideologies : the tumultuous decade of the 1960s"@en ] ;
+    relator:aut [ a bf:Person ;
+            rdfs:label "Richard Lints"@en ] .
+
+&lt;http://id.loc.gov/authorities/subjects/sh96005475&gt; a bf:Temporal ;
+    rdfs:label "Nineteen sixties (1960s)"@en .
+        </pre>
+        <div class="row">
+         <section class="col-md-5 col-md-offset-2">
+            <div class="card">
+              <h3 class="card-header bg-danger">
+                  Exercise <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </h3>
+              <div class="card-block">
+                <p class="card-text">
+                Create and add a BIBFRAME Work your Religion Knowledge Graph. Add at least 
+                two different types BIBFRAME subjects to the work. 
+                </p>
+              </div>
+            </div>
+         </section>
+      </div>
 
       </div>
-      <div class="modal-footer">
+           <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div><!-- /.modal-content -->

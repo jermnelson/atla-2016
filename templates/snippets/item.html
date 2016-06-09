@@ -4,12 +4,32 @@
 <div class="row">
     <section class="col-md-4">
         <h2>RDF Class</h2>
+        <p>The BIBFRAME Item class is a single example of a BIBFRAME Instance and includes 
+        specific identification and inventory management properties like barcode and call 
+        number.</p>
+        <h2>RDF Properties</h2>
+        <p>A BIBFRAME Item has the following properties:</p>
+        <ul>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_enumerationAndChronology">enumerationAndChronology</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_heldBy">heldBy</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_subLocation">subLocation</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_shelfMark">shelfMark</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_electronicLocator">electronicLocator</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_barcode">barcode</a></li>
+            <li><a href="http://id.loc.gov/ontologies/bibframe.html#p_itemOf">itemOf</a></li>
+        </ul>
     </section>
-    <section class="col-md-4">
+    <section class="col-md-8">
         <h2>RDF Graph Examples</h2>
-    </section>
-    <section class="col-md-4">
-        <h2>Linking</h2>
+        <pre class="prettyprint">
+&lt;http://bibcat.org/acd63548-2e8c-11e6-8383-005056c00008&gt; a bf:Item ;
+    bf:heldBy &lt;http://www-lib.uwyo.edu/&gt; ;
+    bf:itemOf &lt;http://bibcat.org/Instance/b96aa86c-2cfa-11e6-8471-005056c00008&gt; ;
+    bf:shelfMark [ a bf:ShelfMarkLcc ;
+            rdf:value "BX7636 .H3" ] ;
+    bf:subLocation [ a bf:Sublocation ;
+            rdf:value "Coe Library Stacks - Level 1"@en ] .
+        </pre>
     </section>
 </div>
 </div>

@@ -1,0 +1,42 @@
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix kds: <http://knowledgelinks.io/ns/data-structures/> .
+@prefix kdr: <http://knowledgelinks.io/ns/data-resources/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix relator: <http://id.loc.gov/vocabulary/relators/> .
+@prefix bc: <http://knowledgelinks.io/ns/bibcat/> .
+@prefix m21: <http://knowledgelinks.io/ns/marc21/> .
+@prefix loc: <http://id.loc.gov/> .
+@prefix schema: <http://www.schema.org/> .
+
+<https://en.wikipedia.org/wiki/Religion> rdfs:label "Religion"@en ;
+    bf:Topic <http://id.loc.gov/authorities/subjects/sh85112549> .
+
+<https://www.atla.com/> a bf:Organization ;
+    rdfs:label "American Theological Library Association"@en ;
+    owl:sameAs <http://id.loc.gov/authorities/names/n79053683> .
+
+<http://intro2libsys.info/atla-2016/> a schema:EducationEvent,
+    bf:Event ;
+    rdfs:label "ATLA 2016 BIBFRAME & Linked Data Workshop"@en ;
+    relator:creator [ a bf:Person ;
+        rdfs:label "Jeremy Nelson"@en ] ;
+    schema:startDate "2016-09-15T8:30" ;
+    schema:endDate "2016-09-15T14:30" ;
+    schema:location [ a schema:Place ;
+        schema:name "Shoreline B Room"@en ;
+        schema:address [ a schema:PostalAddress ;
+            schema:name "Hyatt Regency Long Beach"@en ;
+            schema:streetAddress "200 South Pine Avenue"@en ;
+            schema:addressLocality "Long Beach"@en ;
+            schema:addressRegion "California"@en ;
+            schema:addressCountry "US"@en ;
+            schema:postalCode "90801" ;
+            schema:url "http://longbeach.regency.hyatt.com/"] ;
+    ] ;
+    schema:sponsor <https://www.atla.com/> .
+         
+
+        
