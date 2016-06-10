@@ -1,9 +1,376 @@
 <h2>Converting MARC to BIBFRAME 1.0 RDF</h2>
 <div class="row">
-    <section class="col-md-6">
+    <section class="col-md-12">
         <h3>MARC 21 Record</h3>
+        <pre class="prettyprint">
+=LDR  02781cam  2200553 i 4500
+=001  910568768
+=003  OCoLC
+=005  20160606121947.0
+=008  150114s2015\\\\tnuaf\\\\b\\\\001\0\eng\d
+=010  \\$a2015930874
+=020  \\$a9780718021764$q(hbk.)
+=020  \\$a0718021762$q(hbk.)
+=035  \\$a(OCoLC)910568768$z(OCoLC)896860620
+=040  \\$aTOH$beng$erda$cTOH$dDLC$dBDX$dBTCTA$dTNH$dYDXCP$dBKL$dON8$dCLE$dUOK$dGRN$dVTL$dZCU$dIQU$dMUU$dLNT$dOCLCF$dCOD$dLMR$dOCLCQ$dCOC
+=042  \\$alccopycat
+=043  \\$ae-uk-en
+=049  \\$aCOCA
+=050  00$aPR6039.O32$bZ6916 2015
+=050  00$aPR6039.O32$bZ6916 2015
+=100  1\$aLoconte, Joe,$d1961-$eauthor.
+=245  12$aA hobbit, a wardrobe, and a great war :$bhow J.R.R. Tolkien and C.S. Lewis rediscovered faith, friendship, and heroism in the cataclysm of 1914-1918 /$cJoseph Loconte.
+=264  \1$aNashville, Tennessee :$bNelson Books, an imprint of Thomas Nelson,$c[2015]
+=300  \\$axix, 235 pages, 8 unnumbered pages of plates :$billustrations ;$c22 cm.
+=336  \\$atext$btxt$2rdacontent.
+=337  \\$aunmediated$bn$2rdamedia.
+=338  \\$avolume$bnc$2rdacarrier.
+=504  \\$aIncludes bibliographical references (pages 203-226) and index.
+=505  0\$aThe funeral of a great myth -- The last battle -- In a hole in the ground there lived a hobbit -- The lion, the witch, and the war -- The land of shadow -- That hideous strength -- Conclusion: The Return of the King.
+=520  \\$a"The untold story of how the First World War shaped the lives, faith, and writings of J.R.R. Tolkien and C.S. Lewis"--Amazon.com.
+=600  10$aTolkien, J. R. R.$q(John Ronald Reuel),$d1892-1973$xCriticism and interpretation.
+=600  10$aTolkien, J. R. R.$q(John Ronald Reuel),$d1892-1973$xReligion.
+=600  10$aLewis, C. S.$q(Clive Staples),$d1898-1963$xCriticism and interpretation.
+=600  10$aLewis, C. S.$q(Clive Staples),$d1898-1963$xReligion.
+=650  \0$aWorld War, 1914-1918.
+=650  \0$aLiterature and society$zEngland$xHistory$y20th century.
+=655  \7$aCriticism, interpretation, etc.
+=655  \7$aHistory.
+=600  17$aLewis, C. S.$q(Clive Staples),$d1898-1963.$2fast$0(OCoLC)fst00029827.
+=600  17$aTolkien, J. R. R.$q(John Ronald Reuel),$d1892-1973.$2fast$0(OCoLC)fst00030031.
+=611  27$aWorld War (1914-1918)$2fast$0(OCoLC)fst01180746.
+=648  \7$a1900 - 1999$2fast.
+=650  \7$aLiterature and society.$2fast$0(OCoLC)fst01000096.
+=650  \7$aReligion.$2fast$0(OCoLC)fst01093763.
+=651  \7$aEngland.$2fast$0(OCoLC)fst01219920.
+=907  \\$a.b24306101
+=902  \\$a160606
+=999  \\$b1$c160606$dm$ea$fn$g2
+=994  \\$atbp
+=945  \\$aPR6039.O32$bZ6916 2015$g1$i33027006635050$j0$ltbnew$h0$oc$p$0.00$q $r-$s-$t1$u0$v0$w0$x0$y.i23751198$z160606
+
+        </pre>
     </section>
-    <section class="col-md-6">
+    <section class="col-md-12">
         <h3>BIBFRAME 1.0 RDF</h3>
+        <pre class="prettyprint">
+&lt;http://catalog.coloradocollege.edu/910568768annotation30&gt; a bf:Annotation ;
+    bf:annotates &lt;http://catalog.coloradocollege.edu/910568768&gt; ;
+    bf:changeDate "2016-06-06T12:19" ;
+    bf:derivedFrom &lt;http://catalog.coloradocollege.edu/910568768.marcxml.xml&gt; ;
+    bf:descriptionAuthentication &lt;http://id.loc.gov/vocabulary/descriptionAuthentication/lccopycat&gt; ;
+    bf:descriptionConventions &lt;http://id.loc.gov/vocabulary/descriptionConventions/isbd&gt;,
+        &lt;http://id.loc.gov/vocabulary/descriptionConventions/rda&gt; ;
+    bf:descriptionLanguage &lt;http://id.loc.gov/vocabulary/languages/eng&gt; ;
+    bf:descriptionModifier &lt;http://id.loc.gov/vocabulary/organizations/bdx&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/bkl&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/btcta&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/cle&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/coc&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/cod&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/dlc&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/grn&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/iqu&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/lmr&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/lnt&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/muu&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/oclcf&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/oclcq&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/on8&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/tnh&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/uok&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/vtl&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/ydxcp&gt;,
+        &lt;http://id.loc.gov/vocabulary/organizations/zcu&gt; ;
+    bf:descriptionSource &lt;http://id.loc.gov/vocabulary/organizations/toh&gt; ;
+    bf:generationProcess "DLC transform-tool:2015-10-28-T11:01:00" .
+
+&lt;http://catalog.coloradocollege.edu/910568768helditem56&gt; a bf:HeldItem ;
+    bf:holdingFor &lt;http://catalog.coloradocollege.edu/910568768instance31&gt; ;
+    bf:label "PR6039.O32 Z6916 2015" ;
+    bf:shelfMarkLcc "PR6039.O32 Z6916 2015" .
+
+&lt;http://catalog.coloradocollege.edu/910568768summary11&gt; a bf:Summary ;
+    bf:annotationAssertedBy &lt;http://id.loc.gov/vocabulary/organizations/dlc&gt; ;
+    bf:annotationBody "\"The untold story of how the First World War shaped the lives, faith, and writings of J.R.R. Tolkien and C.S. Lewis\"--Amazon.com." ;
+    bf:label "Summary" ;
+    bf:summaryOf &lt;http://catalog.coloradocollege.edu/910568768&gt; .
+
+&lt;http://catalog.coloradocollege.edu/910568768category53&gt; a bf:Category ;
+    bf:categoryType "media category" ;
+    bf:categoryValue "unmediated" ;
+    bf:label "unmediated" .
+
+&lt;http://catalog.coloradocollege.edu/910568768category9&gt; a bf:Category ;
+    bf:categoryType "content category" ;
+    bf:categoryValue "text" .
+
+&lt;http://catalog.coloradocollege.edu/910568768instance31&gt; a bf:Instance,
+        bf:Monograph ;
+    bf:carrierCategory &lt;http://somecarrier.example.org/volume&gt; ;
+    bf:contentsNote "The funeral of a great myth -- The last battle -- In a hole in the ground there lived a hobbit -- The lion, the witch, and the war -- The land of shadow -- That hideous strength -- Conclusion: The Return of the King." ;
+    bf:dimensions "22 cm." ;
+    bf:extent "xix, 235 pages, 8 unnumbered pages of plates :" ;
+    bf:format "hardback" ;
+    bf:illustrationNote "illustrations ;" ;
+    bf:instanceOf &lt;http://catalog.coloradocollege.edu/910568768&gt; ;
+    bf:instanceTitle &lt;http://catalog.coloradocollege.edu/910568768title34&gt; ;
+    bf:isbn10 &lt;http://isbn.example.org/0718021762&gt; ;
+    bf:isbn13 &lt;http://isbn.example.org/9780718021764&gt; ;
+    bf:lccn [ a bf:Identifier ;
+            bf:identifierScheme &lt;http://id.loc.gov/vocabulary/identifiers/lccn&gt; ;
+            bf:identifierValue "2015930874" ] ;
+    bf:mediaCategory &lt;http://catalog.coloradocollege.edu/910568768category53&gt; ;
+    bf:modeOfIssuance "single unit" ;
+    bf:note "\"The untold story of how the First World War shaped the lives, faith, and writings of J.R.R. Tolkien and C.S. Lewis\"--Amazon.com." ;
+    bf:providerStatement "Nashville, Tennessee : Nelson Books, an imprint of Thomas Nelson, 2015" ;
+    bf:publication [ a bf:Provider ;
+            bf:providerDate "[2015]" ;
+            bf:providerName [ a bf:Organization ;
+                    bf:label "Nelson Books, an imprint of Thomas Nelson" ] ;
+            bf:providerPlace [ a bf:Place ;
+                    bf:label "Nashville, Tennessee " ] ] ;
+    bf:supplementaryContentNote "Includes bibliographical references (pages 203-226) and index." ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierScheme &lt;http://id.loc.gov/vocabulary/identifiers/systemNumber&gt; ;
+            bf:identifierStatus "canceled/invalid" ;
+            bf:identifierValue "(OCoLC)896860620" ],
+        &lt;http://www.worldcat.org/oclc/910568768&gt; ;
+    bf:title "hobbit, a wardrobe, and a great war :"@x-bf-sort ;
+    bf:titleStatement "A hobbit, a wardrobe, and a great war : how J.R.R. Tolkien and C.S. Lewis rediscovered faith, friendship, and heroism in the cataclysm of 1914-1918" .
+
+&lt;http://catalog.coloradocollege.edu/910568768meeting22&gt; a bf:Meeting ;
+    bf:authoritySource "http://id.loc.gov/vocabulary/subjectSchemes/fast" ;
+    bf:authorizedAccessPoint "World War (1914-1918)" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ConferenceName ;
+            madsrdf:authoritativeLabel "World War (1914-1918)" ;
+            madsrdf:isMemberOfMADSScheme &lt;http://id.loc.gov/vocabulary/subjectSchemes/fast&gt; ] ;
+    bf:label "World War (1914-1918)" ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierValue "(OCoLC)fst01180746." ] .
+
+&lt;http://catalog.coloradocollege.edu/910568768person12&gt; a bf:Person ;
+    bf:authorizedAccessPoint "Tolkien, J. R. R. (John Ronald Reuel), 1892-1973--Criticism and interpretation." ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Tolkien, J. R. R. (John Ronald Reuel), 1892-1973--Criticism and interpretation." ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:PersonalName ;
+                        madsrdf:authoritativeLabel "Tolkien, J. R. R. (John Ronald Reuel), 1892-1973" ;
+                        madsrdf:elementList ( [ a madsrdf:FullNameElement ;
+                                    madsrdf:elementValue "Tolkien, J. R. R." ] [ a madsrdf:FullNameElement ;
+                                    madsrdf:elementValue "(John Ronald Reuel)," ] [ a madsrdf:DateNameElement ;
+                                    madsrdf:elementValue "1892-1973" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Criticism and interpretation" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Criticism and interpretation." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme &lt;http://id.loc.gov/authorities/subjects&gt; ] ;
+    bf:label "Tolkien, J. R. R. (John Ronald Reuel), 1892-1973--Criticism and interpretation." .
+
+&lt;http://catalog.coloradocollege.edu/910568768person13&gt; a bf:Person ;
+    bf:authorizedAccessPoint "Tolkien, J. R. R. (John Ronald Reuel), 1892-1973--Religion." ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Tolkien, J. R. R. (John Ronald Reuel), 1892-1973--Religion." ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:PersonalName ;
+                        madsrdf:authoritativeLabel "Tolkien, J. R. R. (John Ronald Reuel), 1892-1973" ;
+                        madsrdf:elementList ( [ a madsrdf:FullNameElement ;
+                                    madsrdf:elementValue "Tolkien, J. R. R." ] [ a madsrdf:FullNameElement ;
+                                    madsrdf:elementValue "(John Ronald Reuel)," ] [ a madsrdf:DateNameElement ;
+                                    madsrdf:elementValue "1892-1973" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Religion" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Religion." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme &lt;http://id.loc.gov/authorities/subjects&gt; ] ;
+    bf:label "Tolkien, J. R. R. (John Ronald Reuel), 1892-1973--Religion." .
+
+&lt;http://catalog.coloradocollege.edu/910568768person14&gt; a bf:Person ;
+    bf:authorizedAccessPoint "Lewis, C. S. (Clive Staples), 1898-1963--Criticism and interpretation." ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Lewis, C. S. (Clive Staples), 1898-1963--Criticism and interpretation." ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:PersonalName ;
+                        madsrdf:authoritativeLabel "Lewis, C. S. (Clive Staples), 1898-1963" ;
+                        madsrdf:elementList ( [ a madsrdf:FullNameElement ;
+                                    madsrdf:elementValue "Lewis, C. S." ] [ a madsrdf:FullNameElement ;
+                                    madsrdf:elementValue "(Clive Staples)," ] [ a madsrdf:DateNameElement ;
+                                    madsrdf:elementValue "1898-1963" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Criticism and interpretation" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Criticism and interpretation." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme &lt;http://id.loc.gov/authorities/subjects&gt; ] ;
+    bf:label "Lewis, C. S. (Clive Staples), 1898-1963--Criticism and interpretation." .
+
+&lt;http://catalog.coloradocollege.edu/910568768person15&gt; a bf:Person ;
+    bf:authorizedAccessPoint "Lewis, C. S. (Clive Staples), 1898-1963--Religion." ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Lewis, C. S. (Clive Staples), 1898-1963--Religion." ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:PersonalName ;
+                        madsrdf:authoritativeLabel "Lewis, C. S. (Clive Staples), 1898-1963" ;
+                        madsrdf:elementList ( [ a madsrdf:FullNameElement ;
+                                    madsrdf:elementValue "Lewis, C. S." ] [ a madsrdf:FullNameElement ;
+                                    madsrdf:elementValue "(Clive Staples)," ] [ a madsrdf:DateNameElement ;
+                                    madsrdf:elementValue "1898-1963" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Religion" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Religion." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme &lt;http://id.loc.gov/authorities/subjects&gt; ] ;
+    bf:label "Lewis, C. S. (Clive Staples), 1898-1963--Religion." .
+
+&lt;http://catalog.coloradocollege.edu/910568768person20&gt; a bf:Person ;
+    bf:authoritySource "http://id.loc.gov/vocabulary/subjectSchemes/fast" ;
+    bf:authorizedAccessPoint "Lewis, C. S. (Clive Staples), 1898-1963." ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:PersonalName ;
+            madsrdf:authoritativeLabel "Lewis, C. S. (Clive Staples), 1898-1963." ;
+            madsrdf:isMemberOfMADSScheme &lt;http://id.loc.gov/vocabulary/subjectSchemes/fast&gt; ] ;
+    bf:label "Lewis, C. S. (Clive Staples), 1898-1963." ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierValue "(OCoLC)fst00029827." ] .
+
+&lt;http://catalog.coloradocollege.edu/910568768person21&gt; a bf:Person ;
+    bf:authoritySource "http://id.loc.gov/vocabulary/subjectSchemes/fast" ;
+    bf:authorizedAccessPoint "Tolkien, J. R. R. (John Ronald Reuel), 1892-1973." ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:PersonalName ;
+            madsrdf:authoritativeLabel "Tolkien, J. R. R. (John Ronald Reuel), 1892-1973." ;
+            madsrdf:isMemberOfMADSScheme &lt;http://id.loc.gov/vocabulary/subjectSchemes/fast&gt; ] ;
+    bf:label "Tolkien, J. R. R. (John Ronald Reuel), 1892-1973." ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierValue "(OCoLC)fst00030031." ] .
+
+&lt;http://catalog.coloradocollege.edu/910568768person7&gt; a bf:Person ;
+    bf:authorizedAccessPoint "Loconte, Joe, 1961-" ;
+    bf:hasAuthority [ a madsrdf:Authority ;
+            madsrdf:authoritativeLabel "Loconte, Joe, 1961-" ] ;
+    bf:label "Loconte, Joe, 1961-" .
+
+&lt;http://catalog.coloradocollege.edu/910568768temporal23&gt; a bf:Temporal ;
+    bf:authoritySource "http://id.loc.gov/vocabulary/subjectSchemes/fast." ;
+    bf:authorizedAccessPoint "1900 - 1999" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:Temporal ;
+            madsrdf:authoritativeLabel "1900 - 1999" ;
+            madsrdf:isMemberOfMADSScheme &lt;http://id.loc.gov/vocabulary/subjectSchemes/fast.&gt; ] ;
+    bf:label "1900 - 1999" .
+
+&lt;http://catalog.coloradocollege.edu/910568768title34&gt; a bf:Title ;
+    bf:label "A hobbit, a wardrobe, and a great war : how J.R.R. Tolkien and C.S. Lewis rediscovered faith, friendship, and heroism in the cataclysm of 1914-1918 / Joseph Loconte." ;
+    bf:subtitle "how J.R.R. Tolkien and C.S. Lewis rediscovered faith, friendship, and heroism in the cataclysm of 1914-1918 " ;
+    bf:titleValue "A hobbit, a wardrobe, and a great war :" .
+
+&lt;http://catalog.coloradocollege.edu/910568768title5&gt; a bf:Title ;
+    bf:label "A hobbit, a wardrobe, and a great war : how J.R.R. Tolkien and C.S. Lewis rediscovered faith, friendship, and heroism in the cataclysm of 1914-1918 / Joseph Loconte." ;
+    bf:subtitle "how J.R.R. Tolkien and C.S. Lewis rediscovered faith, friendship, and heroism in the cataclysm of 1914-1918 " ;
+    bf:titleValue "A hobbit, a wardrobe, and a great war :" .
+
+&lt;http://catalog.coloradocollege.edu/910568768topic16&gt; a bf:Topic ;
+    bf:authorizedAccessPoint "World War, 1914-1918" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:Topic ;
+            madsrdf:authoritativeLabel "World War, 1914-1918" ;
+            madsrdf:isMemberOfMADSScheme &lt;http://id.loc.gov/authorities/subjects&gt; ] ;
+    bf:label "World War, 1914-1918" .
+
+&lt;http://catalog.coloradocollege.edu/910568768topic17&gt; a bf:Topic ;
+    bf:authorizedAccessPoint "Literature and society--England--History--20th century" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:ComplexSubject ;
+            madsrdf:authoritativeLabel "Literature and society--England--History--20th century" ;
+            madsrdf:componentList ( [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "Literature and society" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "Literature and society" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Geographic ;
+                        madsrdf:authoritativeLabel "England" ;
+                        madsrdf:elementList ( [ a madsrdf:GeographicElement ;
+                                    madsrdf:elementValue "England" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Topic ;
+                        madsrdf:authoritativeLabel "History" ;
+                        madsrdf:elementList ( [ a madsrdf:TopicElement ;
+                                    madsrdf:elementValue "History" ] ) ] [ a madsrdf:Authority,
+                            madsrdf:Temporal ;
+                        madsrdf:authoritativeLabel "20th century" ;
+                        madsrdf:elementList ( [ a madsrdf:TemporalElement ;
+                                    madsrdf:elementValue "20th century." ] ) ] ) ;
+            madsrdf:isMemberOfMADSScheme &lt;http://id.loc.gov/authorities/subjects&gt; ] ;
+    bf:label "Literature and society--England--History--20th century" .
+
+&lt;http://catalog.coloradocollege.edu/910568768topic18&gt; a bf:Topic ;
+    bf:authorizedAccessPoint "Criticism, interpretation, etc" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "Criticism, interpretation, etc" ;
+            madsrdf:isMemberOfMADSScheme &lt;&gt; ] ;
+    bf:label "Criticism, interpretation, etc" .
+
+&lt;http://catalog.coloradocollege.edu/910568768topic19&gt; a bf:Topic ;
+    bf:authorizedAccessPoint "History" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:GenreForm ;
+            madsrdf:authoritativeLabel "History" ;
+            madsrdf:isMemberOfMADSScheme &lt;&gt; ] ;
+    bf:label "History" .
+
+&lt;http://catalog.coloradocollege.edu/910568768topic24&gt; a bf:Topic ;
+    bf:authoritySource "http://id.loc.gov/vocabulary/subjectSchemes/fast" ;
+    bf:authorizedAccessPoint "Literature and society" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:Topic ;
+            madsrdf:authoritativeLabel "Literature and society" ;
+            madsrdf:isMemberOfMADSScheme &lt;http://id.loc.gov/vocabulary/subjectSchemes/fast&gt; ] ;
+    bf:label "Literature and society" ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierValue "(OCoLC)fst01000096." ] .
+
+&lt;http://catalog.coloradocollege.edu/910568768topic25&gt; a bf:Topic ;
+    bf:authoritySource "http://id.loc.gov/vocabulary/subjectSchemes/fast" ;
+    bf:authorizedAccessPoint "Religion" ;
+    bf:hasAuthority [ a madsrdf:Authority,
+                madsrdf:Topic ;
+            madsrdf:authoritativeLabel "Religion" ;
+            madsrdf:isMemberOfMADSScheme &lt;http://id.loc.gov/vocabulary/subjectSchemes/fast&gt; ] ;
+    bf:label "Religion" ;
+    bf:systemNumber [ a bf:Identifier ;
+            bf:identifierValue "(OCoLC)fst01093763." ] .
+
+&lt;http://catalog.coloradocollege.edu/910568768&gt; a bf:Text,
+        bf:Work ;
+    bf:authorizedAccessPoint "Loconte, Joe, 1961- A hobbit, a wardrobe, and a great war : how J.R.R. Tolkien and C.S. Lewis rediscovered faith, friendship, and heroism in the cataclysm of 1914-1918 / Joseph Loconte.A hobbit, a wardrobe, and a great war :how J.R.R. Tolkien and C.S. Lewis rediscovered faith, friendship, and heroism in the cataclysm of 1914-1918",
+        "locontejoe1961hobbitawardrobeandagreatwarhowjrrtolkienandcslewisrediscoveredfaithfriendshipandheroisminthecataclysmof19141918work"@x-bf-hash ;
+    bf:classificationLcc &lt;http://id.loc.gov/authorities/classification/PR6039.O32&gt; ;
+    bf:contentCategory &lt;http://catalog.coloradocollege.edu/910568768category9&gt; ;
+    bf:creator &lt;http://catalog.coloradocollege.edu/910568768person7&gt; ;
+    bf:language &lt;http://id.loc.gov/vocabulary/languages/eng&gt; ;
+    bf:subject &lt;http://catalog.coloradocollege.edu/910568768meeting22&gt;,
+        &lt;http://catalog.coloradocollege.edu/910568768person12&gt;,
+        &lt;http://catalog.coloradocollege.edu/910568768person13&gt;,
+        &lt;http://catalog.coloradocollege.edu/910568768person14&gt;,
+        &lt;http://catalog.coloradocollege.edu/910568768person15&gt;,
+        &lt;http://catalog.coloradocollege.edu/910568768person20&gt;,
+        &lt;http://catalog.coloradocollege.edu/910568768person21&gt;,
+        &lt;http://catalog.coloradocollege.edu/910568768temporal23&gt;,
+        &lt;http://catalog.coloradocollege.edu/910568768topic16&gt;,
+        &lt;http://catalog.coloradocollege.edu/910568768topic17&gt;,
+        &lt;http://catalog.coloradocollege.edu/910568768topic18&gt;,
+        &lt;http://catalog.coloradocollege.edu/910568768topic19&gt;,
+        &lt;http://catalog.coloradocollege.edu/910568768topic24&gt;,
+        &lt;http://catalog.coloradocollege.edu/910568768topic25&gt;,
+        &lt;http://id.loc.gov/vocabulary/geographicAreas/e-uk-en&gt; ;
+    bf:temporalCoverageNote "1900 - 1999" ;
+    bf:title "hobbit, a wardrobe, and a great war :"@x-bf-sort ;
+    bf:workTitle &lt;http://catalog.coloradocollege.edu/910568768title5&gt; .
+
+        </pre>
     </section>
 </div>
