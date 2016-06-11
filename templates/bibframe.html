@@ -3,13 +3,62 @@
 {% block main %}
 <h3>ATLA 2016 - Long Beach</h3>
 <h2>BIBFRAME</h2>
+<h2 class="text-xs-center bg-success">BIBFRAME 1.0</h2>
 <p class="lead">
     The BIBFRAME Initiative was started by the Library of Congress in 2011 with the intent to
     "integrate with and engage in the wider information community and still serve the very
     specific needs of libraries."<sup><a href="https://www.loc.gov/bibframe/faqs/">1</a></sup> 
 </p>
-<h2 class="text-xs-center bg-success">History of BIBFRAME</h2>
+<p>
+    The first version of BIBFRAME was released in 2014 and is still available at 
+    <a href="http://bibframe.org/">bibframe.org</a>. The 1.0 version of BIBFRAME 
+    was based on four main classes and is illustrated below:
+<div class="row">
+    <section class="col-md-6">
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">Work</h4>
+                <p class="card-text">
+                A BIBFRAME Work is a resource 
+                reflects the conceptual essence of the cataloging resource.                
+               </p>
+            </div>
+        </div>  
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">Instance</h4>
+                <p class="card-text">
+                A BIBFRAME Instance reflects an individual, material embodiment 
+                of a BIBFRAME Work and is conceptually similar to a FRBR Manifestation. 
+                </p>
+            </div>
+        </div>  
 
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">Authorities</h4>
+                <p class="card-text">
+                BIBFRAME Authorities are resources that represent concepts or 
+                things that have key relationships with other BIBFRAME Resources. 
+               </p>
+            </div>
+        </div>  
+
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">Annotations</h4>
+                <p class="card-text">
+                BIBFRAME Annotations are resources that assert additional 
+                information for other BIBFRAME Resources.</p>
+            </div>
+        </div>  
+    </section>
+
+    <section class="col-md-6">
+        <img src="{{ url_for('static', filename="img/bibframe1.png") }}" class="thumbnail">
+
+    </section>
+</div>
 <h2 class="text-xs-center bg-primary">BIBFRAME 2.0</h2>
 <div class="row">
     <section class="col-md-5">

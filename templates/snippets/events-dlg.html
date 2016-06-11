@@ -1,5 +1,5 @@
 <div class="modal fade" id="events-dlg">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -25,7 +25,23 @@
             </blockquote >
           <h5><i class="fa fa-microphone" aria-hidden="true"></i> Speech</h5>
             <pre class="prettyprint">
-&lt;https://en.wikipedia.org/wiki/I_Have_a_Dream&gt; a bf:Event .
+
+&lt;https://en.wikipedia.org/wiki/I_Have_a_Dream&gt; a bf:Event ;
+    rdfs:label "Martin Luther King - I Have A Dream Speech" ;
+    bf:date "1963-08-28" ;
+    bf:eventContent &lt;http://bibcat.org/0de7e410-3019-11e6-a7b6-ac87a3129ce6&gt; .
+
+&lt;http://bibcat.org/0b7a67de-301a-11e6-a7e7-ac87a3129ce6&gt; a bf:Electronic ;
+    bf:hasitem &lt;http://bibcat.org/0f7b2928-301b-11e6-9cf6-ac87a3129ce6&gt; ;
+    bf:instanceOf &lt;http://bibcat.org/0de7e410-3019-11e6-a7b6-ac87a3129ce6&gt; .
+
+&lt;http://bibcat.org/0de7e410-3019-11e6-a7b6-ac87a3129ce6&gt; a bf:MovingImage ;
+    bf:eventContentOf &lt;https://en.wikipedia.org/wiki/I_Have_a_Dream&gt; ;
+    bf:hasInstance &lt;http://bibcat.org/0b7a67de-301a-11e6-a7e7-ac87a3129ce6&gt; .
+
+&lt;http://bibcat.org/0f7b2928-301b-11e6-9cf6-ac87a3129ce6&gt; a bf:Item ;
+    bf:electronicLocator &lt;https://www.youtube.com/watch?v=H0yP4aLyq1g&gt; ;
+    bf:itemOf &lt;http://bibcat.org/0b7a67de-301a-11e6-a7e7-ac87a3129ce6&gt; .
 
             </pre>
           <h5><i class="fa fa-music" aria-hidden="true"></i> Concert</h5>
