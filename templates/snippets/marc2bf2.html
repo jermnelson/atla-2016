@@ -1,0 +1,159 @@
+<h2>RDF Framework MARC-to-BIBFRAME 2.0</h2>
+<p class="lead">The <a href="#">RDF Framework</a> is a critical component of the
+open-source Catalog Pull Platform. Because of the very recent release of BIBFRAME 2.0
+in April of 2016, the tools for converting MARC records to the BIBFRAME classes 
+has just started. The first iteration of a linked-data tool produces the following
+BIBFRAME 2.0 graphs with minimal mappings.</p>
+<ol class="lead">
+    <li>Define a MARC-to-BIBFRAME mapping inspired by the work 
+    at <a href="http://www.marc21rdf.info/">marc21rdf</a> by defining
+    a <code>kds:PropertyLinker</code> or 
+    <code>kdsaOrdered:PropertyLinker</code> set of triples.
+    </li>
+</ol>
+<h3>RDF BIBFRAME 2.0 Graph</h3>
+<div class="row">
+    <section class="col-md-9">
+        <pre class="prettyprint">
+&lt;http://bibcat.org/684302c6-3106-11e6-bc94-ac87a3129ce6&gt; a bf:Instance ;
+    bf:bookFormat [ a bf:BookFormat ;
+            rdf:value "(hbk.)" ] ;
+        </pre>
+    </section>
+    <section class="col-md-3">
+    <p>Our instance is created with a temporary BIBCAT URL with a RDF class of 
+    BIBFRAME Instance. The bookFormat property is set with a blank node and
+    is mapped in the <a 
+      {#class="btn btn-primary" #}
+      data-toggle="popover" 
+      title="Mapping MARC-to-BIBFRAME"
+      data-placement="left" 
+      data-html="true"
+      data-content="<pre>
+bc:m21-bf_bookFormat a kds:PropertyLinker ;
+  kds:srcPropUri m21:M020__q ;
+  kds:destClassUri bf:BookFormat ;
+  kds:destPropUri rdf:value ;
+  kds:linkedRange bf:bookFormat ;
+  kds:linkedClass bf:Instance .</pre>"
+    >kds-bibcat-marc-ingestion.ttl</a> turtle file
+    </p>
+
+    </section>
+</div>
+<div class="row">
+    <section class="col-md-9">
+        <pre class="prettyprint">
+    bf:carrier &lt;http://id.loc.gov/vocabulary/carriers/nc&gt;
+    bf:classification [ a bf:ClassificationLcc ;
+            rdf:value "PR6039.O32 Z6916 2015" ] ;
+    bf:dimensions "22 cm." ;
+    bf:extent [ a bf:Extent ;
+        rdf:value "xix, 235 pages, 8 unnumbered pages of plates :" ] ;
+    </pre>
+    </section>
+    <section class="col-md-3">
+    <p>
+     The BIBFRAME Carrier is performed and linked to the Library of 
+     Congress ontology available at 
+     <code>http://id.loc.gov/vocabulary/carriers/</code>. The 
+     Library of Congress classification number is stored in a blank 
+     node with a RDF class of
+    <a href="http://id.loc.gov/ontologies/bibframe.html#c_ClassificationLcc"> ClassificationLcc</a>.</p>
+    <p>
+     The BIBFRAME extent stores the page number and other units 
+     information in a blank node.
+    </p>
+    </section>
+</div>
+<div class="row">
+    <section class="col-md-9">
+        <pre class="prettyprint">
+    bf:hasItem &lt;http://bibcat.org/6813c022-3106-11e6-a30e-ac87a3129ce6&gt; ;
+    bf:identifiedBy [ a bf:Isbn ;
+            rdf:value "0718021762",
+                "9780718021764" ] ;
+    bf:originDate "2015" ;
+        </pre>
+    </section>
+    <section class="col-md-3">
+    <p>
+        The hasItem BIBFRAME property links to the BIBFRAME 
+        item Class. The ISBN identifiers are used for de-duplicating
+        Instances in the bibcat.org catalog. The origin date is 
+        extracted from the MARC 008 field.
+    </p>
+    </section>
+</div>
+<div class="row">
+    <section class="col-md-9">
+     <pre class="prettyprint">
+    bf:subject [ a bf:Topic ;
+            rdf:value "World War, 1914-1918." ],
+        [ a bf:Person ;
+            rdf:value "Lewis, C. S. 1898-1963 Criticism and interpretation." ],
+        [ a bf:Person ;
+            rdf:value "Lewis, C. S. 1898-1963 Religion." ],
+        [ a bf:Topic ;
+            rdf:value "Literature and society England" ],
+        [ a bf:Person ;
+            rdf:value "Tolkien, J. R. R. 1892-1973 Criticism and interpretation." ],
+        [ a bf:Person ;
+            rdf:value "Tolkien, J. R. R. 1892-1973 Religion." ] ;
+    </pre>
+    </section>
+    <section class="col-md-3">
+    <p>
+        The BIBFRAME subjects are stored as blank nodes that with
+        the values of various 600 and 650 MARC subfields. 
+    </p>
+    </section>
+
+</div>
+<div class="row">
+    <section class="col-md-9">
+     <pre class="prettyprint">
+    bf:summary [ a bf:Summary ;
+            rdf:value ""The untold story of how the First World War shaped the lives, faith, and writings of J.R.R. Tolkien and C.S. Lewis"--Amazon.com." ] ;
+    bf:tableOfContents [ a bf:TableOfContents ;
+            rdf:value "The funeral of a great myth -- The last battle -- In a hole in the ground there lived a hobbit -- The lion, the witch, and the war -- The land of shadow -- That hideous strength -- Conclusion: The Return of the King." ] ;
+    </pre>
+    </section>
+    <section class="col-md-3">
+    The BIBFRAME summary and tableOfContents properties of the Instance
+    are mapped from MARC 21 5XX fields. 
+    </section>
+
+</div>
+<div class="row">
+    <section class="col-md-9">
+     <pre class="prettyprint">
+    bf:title [ a bf:InstanceTitle ;
+            bf:mainTitle "A hobbit, a wardrobe, and a great war :" ;
+            bf:subtitle "how J.R.R. Tolkien and C.S. Lewis rediscovered faith, friendship, and heroism in the cataclysm of 1914-1918 /" ] ;
+    relators:aut [ a bf:Person ;
+            schema:alternativeName "Loconte, Joe," ] .    
+        </pre>
+
+    </section>
+    <section class="col-md-3">
+    The BIBFRAME InstanceTitle and the author relationships store
+    data in MARC 100 and 245 fields. 
+    </section>
+</div>
+<div class="row">
+    <section class="col-md-9">
+        <pre class="prettyprint">
+&lt;http://bibcat.org/225cc36c-30e0-11e6-8bfc-ac87a3129ce6&gt; a bf:Item ;
+    bf:itemOf &lt;http://bibcat.org/2289199c-30e0-11e6-8334-ac87a3129ce6&gt; .
+    </section>
+    <section class="col-md-3">
+    <p>
+        The BIBCAT Item should have additional properties that are 
+        specific to your ILS.
+    </p> 
+    </section>
+</div>
+
+
+
