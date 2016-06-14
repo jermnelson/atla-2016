@@ -14,4 +14,101 @@
 </p>
 <img src="{{ url_for('static', filename="img/your-catalog.svg") }}" 
     class="thumbnail center-block">
+   
+<h3>Catalog Pull Platform</h3>
+<p> The Catalog Pull Platform is the research effort by 
+Jeremy Nelson and <a href="http://knowledgelinks.io">KnowledgeLinks</a>
+to develop a flexible, lightly coupled, bibliographic and 
+    semantic web suite of technology for libraries, museums, and other cultural
+    heritage organizations to develop small and efficient technology solutions
+    for bibliographic and digital asset management. </p>
+<div class="row">
+    <section class="col-md-4">
+        <p>
+        Inspired by both the Lean Startup and Toyota's Lean Manufacturing, the Catalog Pull Platform 
+        moves away from trying to anticipate the needs and then "pushing" services and technology to 
+        patrons and staff, but instead identifies and responds to needs and demands for library technology 
+        by "pulling" directly from various constituencies served by libraries and cultural heritage organizations. 
+        </p>
+        <h3>People</h3>
+        <img src="{{ url_for("static", filename="img/people.png") }}" 
+          class="pull-right"
+          alt="People - primary source of pull">
+        <p>
+        People are the first and most important source of library systems 
+        demand in the Catalog Pull Platform. By listening to patrons, 
+        staff, and other vested individuals we can build lightweight utilities
+        to meet that need.</p>
+        <h3>Institutions</h3>
+        <img src="{{ url_for("static", filename="img/institutions.png") }}" 
+          class="pull-left"
+          alt="Institutions - Responsiblity and Accountibility">
+        <p>Institutions are the second source of pull for the Catalog Pull Platform 
+        as both internal and external groups hold libraries accountable for 
+        implicit and explicit outcomes.</p> 
+        <h3>Algorithms</h3>
+        <img src="{{ url_for("static", filename="img/algorithms.png") }}" 
+          class="pull-right"
+          alt="Algorithms - Connecting Networked Library Systems">
+        <p>To function as first-class citizens in the networked information 
+        environment, the library's primary website and catalog must be easily found
+        Google, Facebook, and other third parties.</p> 
+        <p>By publishing their institution's
+        organizational knowledge and collections as Linked Data and providing 
+        open APIs for use by other people and institutions, library systems function
+        as critical asset.</p> 
+    </section>
+    <section class="col-md-8">
+    <img src="{{ url_for("static", filename="img/catalog-pull-platform.svg") }}" 
+        alt="Catalog Pull Platform" class="thumbnail" style="width: 95%; background-color: white">
+
+    <div class="card card-inverse" style="width: 25rem; background-color: #333; border-color: #333;" >
+        <a href="http://www.becomingleanlibrary.com" >
+            <img class="card-img pull-right" src="{{ url_for('static', filename="img/bll-cover.png") }}"
+        </a>
+        <div class="card-block">
+        <h3 class="card-title">Interested in Learning more?</h2>
+        <p class="card-text">My book 
+        <em><a href="http://www.becomingleanlibrary.com">Becoming a Lean Library</a></em>
+        is published by Chandos Publishing and goes into much more detail
+        on how a Catalog Pull Platform can be used in improving Library operations and
+        services.
+        </p>
+    </div>
+</article>
+    </section>
+</div>
+<div class="row">
+  <section class="col-md-8">
+    <h1 style="text-align: center">Group Exercise</h1> 
+    <ol style="font-size: 1.8em">
+      <li>Please divide yourselves into groups of three, four,
+      or five people.</li>
+      <li>For each source pull; come up two or three examples of pull 
+         from your own experience.</li>
+      <li>Have own group member enter your responses by highlight and
+       annotating each pull source - people, institutions, and algorithms -
+       with <a href="https://hypothes.is/">https://hypothes.is</a>
+      </li>
+    </ol>
+</div> 
+<hr>
+<h3>BIBCAT 1.0</h3>
+<div class="row">
+    <section class="col-md-3">
+        <h4>Lessons learned</h4>
+        <ul>
+            <li>Proof of concept</li>
+            <li>Exploration of search technologies</li>
+            <li>Challenge of developing vocabulary</li>
+    </section>
+    <section class="col-md-9">
+        <iframe src="http://bibcat.org" frameborder="0" border="0" cellspacing="0"></iframe>
+    </section>
+</div>
+<hr>
+<h3>Build-Measure-Learn Iterations for BIBCAT 2.0</h3>
+<p class="lead">Following the Lean Startup practice of build-measure-learn software
+development iterations, we are on the first iteration for BIBCAT 2.0 using BIBFRAME 2.0
+as one of the core vocabularies.</p>
 {% endblock %}
