@@ -9,9 +9,13 @@
     <meta name="description" 
           content="American Theological Library Association - BIBFRAME and Linked Data workshop in Long Beach, California on June 11th, 2016">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/bootstrap.min.css") }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/font-awesome.min.css") }}">
+ 
+    {#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <script async defer src="//hypothes.is/embed.js"></script> 
+    #}
   </head>
   <body class="container">
     {% block nav %}
@@ -27,7 +31,12 @@
     {% block dialogs %}
     {% endblock %}
     <!-- jQuery first, then Bootstrap JS. -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename="js/jquery.min.js") }}"></script>
+    <script src="{{ url_for('static', filename="js/tether.min.js") }}"></script>
+    <script src="{{ url_for('static', filename="js/bootstrap.min.js") }}"></script>
+    <script src="{{ url_for('static', filename="js/run_prettify.js?lang=xml&lang=js&lang=python&skin=sunburst")}}"></script>
+
+{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://raw.githubusercontent.com/HubSpot/tether/master/dist/js/tether.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=xml&lang=js&lang=python&skin=sunburst"></script>
@@ -40,7 +49,7 @@
   ga('create', 'UA-34716333-1', 'auto');
   ga('send', 'pageview');
 
-</script>
+</script>#}
     {% block more_js %}{% endblock %}
   </body>
 </html>
