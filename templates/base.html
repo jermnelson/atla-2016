@@ -11,10 +11,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename="css/bootstrap.min.css") }}">
     <link rel="stylesheet" href="{{ url_for('static', filename="css/font-awesome.min.css") }}">
- 
+     <script async defer src="//hypothes.is/embed.js"></script> 
     {#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <script async defer src="//hypothes.is/embed.js"></script> 
+    
     #}
   </head>
   <body class="container">
@@ -34,7 +34,8 @@
     <script src="{{ url_for('static', filename="js/jquery.min.js") }}"></script>
     <script src="{{ url_for('static', filename="js/tether.min.js") }}"></script>
     <script src="{{ url_for('static', filename="js/bootstrap.min.js") }}"></script>
-    <script src="{{ url_for('static', filename="js/run_prettify.js?lang=xml&lang=js&lang=python&skin=sunburst")}}"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=xml&lang=js&lang=python&skin=sunburst"></script>
+ 
 
 {#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://raw.githubusercontent.com/HubSpot/tether/master/dist/js/tether.min.js"></script>
